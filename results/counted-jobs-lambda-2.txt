@@ -1,0 +1,13 @@
+LAMBDA: 2
+device name: 6, finished: 1857, avg_fidelity: 0.7503 +/- 0.0811, avg_waittime: 37.7539 +/- 18.5615
+device name: 7, finished: 1777, avg_fidelity: 0.7487 +/- 0.0790, avg_waittime: 29.7125 +/- 14.2209
+device name: 11, finished: 1855, avg_fidelity: 0.7510 +/- 0.0799, avg_waittime: 31.1105 +/- 14.7771
+device name: 3, finished: 380, avg_fidelity: 0.7459 +/- 0.0791, avg_waittime: 235.7394 +/- 137.2818
+device name: 10, finished: 1887, avg_fidelity: 0.7538 +/- 0.0796, avg_waittime: 32.8184 +/- 15.6429
+device name: 5, finished: 417, avg_fidelity: 0.7491 +/- 0.0799, avg_waittime: 219.5746 +/- 116.7904
+device name: 9, finished: 1902, avg_fidelity: 0.7510 +/- 0.0779, avg_waittime: 34.3258 +/- 16.0608
+device name: 1, finished: 399, avg_fidelity: 0.7538 +/- 0.0793, avg_waittime: 236.7620 +/- 124.4842
+device name: 2, finished: 388, avg_fidelity: 0.7544 +/- 0.0813, avg_waittime: 242.2135 +/- 125.4435
+device name: 4, finished: 388, avg_fidelity: 0.7457 +/- 0.0802, avg_waittime: 234.3971 +/- 116.6540
+device name: 8, finished: 1833, avg_fidelity: 0.7509 +/- 0.0793, avg_waittime: 29.4009 +/- 14.1674
+Total job processed: 13083 | Never Assigned: 7067
