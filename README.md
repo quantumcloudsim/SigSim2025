@@ -27,7 +27,7 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
    python Section-6-Use-case-2.py
    ```
 ## Containerized Artifact (recommended)
-### We provide a Docker container to guarantee reproducibility across systems.
+### We provide a Docker container for reproducibility across systems.
 
 1. **Build the Docker image**
    ```bash 
