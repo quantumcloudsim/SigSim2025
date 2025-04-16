@@ -22,7 +22,7 @@ sim_hours = defaultdict(list)
 exe_time = defaultdict(list)
 
 for num_device in range(1,8): 
-    for _ in range(1): 
+    for _ in range(10): 
         start_time = time.time()        
         qcloudsimenv = QCloudSimEnv(
             devices=devices[0:num_device],
@@ -72,5 +72,5 @@ plt.savefig("Fig-8-simulation_time_vs_machines.png")
 
 total_mins = 0
 for t in avg_exe_time: 
-    total_mins +=(t*10/60)
+    total_mins +=(t/60)
 print(f'Total Execution Time: {total_mins} minute')
