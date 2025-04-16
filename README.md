@@ -7,7 +7,6 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
 
 - Git  
 - Docker (recommended) or Python 3.8+
-- PIP
 
 ## Python Environment (if not using Docker)
 
