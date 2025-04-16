@@ -23,8 +23,8 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
    ```
 3.	**Run Use‑Case scripts**
    ```bash
-   python Section-6-Use-case-1.py
-   python Section-6-Use-case-2.py
+   python3 Section-6-Use-case-1.py
+   python3 Section-6-Use-case-2.py
    ```
 ## Containerized Artifact (recommended)
 ### We provide a Docker container for reproducibility across systems.
