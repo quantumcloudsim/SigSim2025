@@ -11,13 +11,19 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
 ## Python Environment (if not using Docker)
 
 1. **Create & activate a virtual environment**  
+   For macOS/Linux, run the following commands: 
    ```bash
    cd SigSim2025
    python3 -m venv .venv
    source .venv/bin/activate       # macOS/Linux
+   ```
+   For Windows PowerShell, run the following: 
+   ```bash
+   cd SigSim2025
+   python3 -m venv .venv
    .venv\Scripts\Activate.ps1      # Windows PowerShell
    ```
-2.	**Install dependencies**
+3.	**Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
