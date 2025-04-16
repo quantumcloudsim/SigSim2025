@@ -20,7 +20,3 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
    ```bash
    pip install -r requirements.txt
 
-3.	**Run Use‑Case scripts**
-   ```bash
-   python Section-6-Use-case-1.py
-   python Section-6-Use-case-2.py
