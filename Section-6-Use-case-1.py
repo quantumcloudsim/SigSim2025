@@ -82,7 +82,7 @@ avg_fidelity_ = defaultdict(int)
 std_fidelity_ = defaultdict(int)
 SAVE_RAW_DATA = False
 
-for i in range(10): 
+for i in range(2): 
     for LAMBDA in LAMBDAS: 
         # Create quantum devices
         ibm_kawasaki = IBM_Kawasaki(env=None, name="1", printlog = False)
@@ -111,7 +111,7 @@ for i in range(10):
             job_feed_method="generator",
             job_generation_model=expovar_model
         )
-        qcloudsimenv.run(until=10080)
+        qcloudsimenv.run(until=1000)
 
         end_time = time.time() # End the timer
         elapsed_time = end_time - start_time # Calculate elapsed time

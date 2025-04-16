@@ -1,13 +1,13 @@
 LAMBDA: 2
-device name: 11, finished: 1804, avg_fidelity: 0.7505 +/- 0.0801, avg_waittime: 31.0642 +/- 14.8517
-device name: 5, finished: 401, avg_fidelity: 0.7477 +/- 0.0795, avg_waittime: 227.7663 +/- 124.6147
-device name: 7, finished: 1816, avg_fidelity: 0.7519 +/- 0.0789, avg_waittime: 29.1109 +/- 13.9268
-device name: 2, finished: 382, avg_fidelity: 0.7518 +/- 0.0826, avg_waittime: 237.8188 +/- 133.4902
-device name: 8, finished: 1838, avg_fidelity: 0.7527 +/- 0.0806, avg_waittime: 28.9568 +/- 14.1759
-device name: 1, finished: 359, avg_fidelity: 0.7471 +/- 0.0806, avg_waittime: 248.5734 +/- 135.7115
-device name: 10, finished: 1800, avg_fidelity: 0.7515 +/- 0.0799, avg_waittime: 33.5742 +/- 15.5370
-device name: 4, finished: 428, avg_fidelity: 0.7472 +/- 0.0782, avg_waittime: 214.9724 +/- 117.5177
-device name: 6, finished: 1851, avg_fidelity: 0.7512 +/- 0.0797, avg_waittime: 37.8013 +/- 18.3431
-device name: 9, finished: 1842, avg_fidelity: 0.7507 +/- 0.0807, avg_waittime: 33.3255 +/- 16.1820
-device name: 3, finished: 417, avg_fidelity: 0.7540 +/- 0.0787, avg_waittime: 227.8549 +/- 120.1084
-Total job processed: 12938 | Never Assigned: 7138
+device name: 9, finished: 177, avg_fidelity: 0.7528 +/- 0.0772, avg_waittime: 32.3047 +/- 15.9972
+device name: 4, finished: 37, avg_fidelity: 0.7614 +/- 0.0688, avg_waittime: 203.5154 +/- 83.3243
+device name: 11, finished: 149, avg_fidelity: 0.7433 +/- 0.0775, avg_waittime: 31.2882 +/- 13.9852
+device name: 3, finished: 43, avg_fidelity: 0.7765 +/- 0.0779, avg_waittime: 200.4698 +/- 104.8853
+device name: 8, finished: 191, avg_fidelity: 0.7534 +/- 0.0821, avg_waittime: 30.4957 +/- 14.7158
+device name: 10, finished: 167, avg_fidelity: 0.7523 +/- 0.0803, avg_waittime: 32.9197 +/- 15.5902
+device name: 7, finished: 166, avg_fidelity: 0.7530 +/- 0.0759, avg_waittime: 29.8682 +/- 14.0895
+device name: 1, finished: 38, avg_fidelity: 0.7576 +/- 0.0834, avg_waittime: 201.8671 +/- 104.1272
+device name: 2, finished: 39, avg_fidelity: 0.7576 +/- 0.0842, avg_waittime: 221.9447 +/- 99.7419
+device name: 5, finished: 39, avg_fidelity: 0.7557 +/- 0.0819, avg_waittime: 207.2498 +/- 86.5443
+device name: 6, finished: 174, avg_fidelity: 0.7553 +/- 0.0829, avg_waittime: 36.9384 +/- 17.9441
+Total job processed: 1220 | Never Assigned: 626
