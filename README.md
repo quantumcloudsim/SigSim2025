@@ -38,28 +38,30 @@ git clone https://github.com/quantumcloudsim/SigSim2025.git
    python3 Section-6-Use-case-1.py
    python3 Section-6-Use-case-2.py
    ```
-## Containerized Artifact (recommended)
-### We provide a Docker container for reproducibility across systems.
+## Containerized Artifact 
+### We also published public image for this work. You can fetch the container and reproduce the experiments via Docker.
 
-1. **Build the Docker image**
+1. **Clone the repository**
    ```bash 
+   git clone https://github.com/quantumcloudsim/SigSim2025.git
    cd SigSim2025
-   docker build -t sigsim2025:latest .
    ```
-2. **Verify the environment**
+2. **Pull the container image**
 
    ```bash
-   docker run --rm -it sigsim2025:latest bash
-    # Inside container:
-    #   python --version
-    #   pip list
-    #   ls
-    #   exit
+   docker pull ghcr.io/quantumcloudsim/sigsim2025:latest
    ```
-3. **Run the program**
+3. **Run Use-Case 1**
 
     ```bash
-    docker run --rm sigsim2025:latest
+    docker run --rm ghcr.io/quantumcloudsim/sigsim2025:latest \
+    python Section-6-Use-case-1.py
+    ```
+3. **Run Use-Case 2**
+
+    ```bash
+    docker run --rm ghcr.io/quantumcloudsim/sigsim2025:latest \
+    python Section-6-Use-case-2.py
     ```
 ## Repository Structure
 
