@@ -20,3 +20,58 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
    ```bash
    pip install -r requirements.txt
 
+3.	**Run Use‑Case scripts**
+   ```bash
+   python Section-6-Use-case-1.py
+   python Section-6-Use-case-2.py
+
+## Containerized Artifact (recommended)
+### We provide a Docker container to guarantee reproducibility across systems.
+
+1. **Build the Docker image**
+   ```bash 
+   cd SigSim2025
+   docker build -t sigsim2025:latest .
+
+2. **Verify the environment**
+
+   ```bash
+   docker run --rm -it sigsim2025:latest bash
+    # Inside container:
+    #   python --version
+    #   pip list
+    #   ls
+    #   exit
+
+3. **Run the program**
+
+    ```bash
+    docker run --rm sigsim2025:latest
+
+## Repository Structure
+
+  ```bash
+      SigSim2025/
+      ├── Dockerfile
+      ├── README.md
+      ├── requirements.txt
+      ├── qcloud.py
+      ├── Section-6-Use-case-1.py
+      ├── Section-6-Use-case-2.py
+      ├── QCloud/                  # Core simulation code
+      ├── configs/                 # Configuration files
+      ├── results/                 # Experiment outputs
+      ├── synth_job_batches/       # Job definitions
+      └── utility_functions/       # Helper scripts
+
+## Citation 
+If you use this artifact in your work, please cite:
+  
+    ```bibtex
+     @misc{SigSim2025,
+       author       = {A Digital Twin of Scalable Quantum Clouds},
+       title        = {{Submission to SigSim2025}},
+       year         = {2025},
+       doi          = {10.5281/zenodo.15099199},
+       howpublished = {\url{https://github.com/quantumcloudsim/SigSim2025.git}}
+     }
