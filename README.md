@@ -80,6 +80,8 @@ git clone https://github.com/quantumcloudsim/SigSim2025.git
 
 ## Example Code
 
+This example demonstrates how to set up and run a simulation using the QCloud framework. The code initializes a device (using the IBM_Kawasaki class) and runs a simulation environment (QCloudSimEnv) with a custom job generation model. The simulation runs until a specified time limit.
+
 1.	**Prepare the Environment:**
 Make sure you have created a virtual environment and installed all required packages.
 
@@ -98,9 +100,6 @@ Save the following sample code in a Python file (e.g., simulate.py):
    )
    qcloudsimenv.run(until=100)
    ```
-  	
-This example demonstrates how to set up and run a simulation using the QCloud framework. The code initializes a device (using the IBM_Kawasaki class) and runs a simulation environment (QCloudSimEnv) with a custom job generation model. The simulation runs until a specified time limit.
-
 3.	**Observe the Output:**
 The simulation will execute, logging events to your console (as specified by printlog=True). You can review the simulation steps and results, which might include job scheduling, device processing, and more depending on how the QCloud framework is designed. If you choose to print the log, the output looks somewhat a like: 
 
