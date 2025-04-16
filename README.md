@@ -39,7 +39,7 @@ git clone https://github.com/quantumcloudsim/SigSim2025.git
    python3 Section-6-Use-case-2.py
    ```
 ## Containerized Artifact 
-### We also published public image for this work. You can fetch the container and reproduce the experiments via Docker.
+We also generated an image for this work and made it public. You can fetch the container and reproduce the experiments via Docker.
 
 1. **Clone the repository**
    ```bash 
