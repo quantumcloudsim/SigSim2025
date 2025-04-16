@@ -86,19 +86,18 @@ Make sure you have created a virtual environment and installed all required pack
 2.	**Run the Simulation:**
 Save the following sample code in a Python file (e.g., simulate.py):
 
-         ```
-  	      python
-         from QCloud import *
+   ```python
+   from QCloud import *
 
-         ibm_kawasaki = IBM_Kawasaki(env=None, name="ibm_kawasaki", printlog=True)
-         qcloudsimenv = QCloudSimEnv(
-            devices=[ibm_kawasaki],
-            broker_class=ParallelBroker,
-            job_feed_method="generator",
-            job_generation_model=lambda: random.expovariate(lambd=0.1)
-         )
-         qcloudsimenv.run(until=100)
-         ```
+   ibm_kawasaki = IBM_Kawasaki(env=None, name="ibm_kawasaki", printlog=True)
+   qcloudsimenv = QCloudSimEnv(
+      devices=[ibm_kawasaki],
+      broker_class=ParallelBroker,
+      job_feed_method="generator",
+      job_generation_model=lambda: random.expovariate(lambd=0.1)
+   )
+   qcloudsimenv.run(until=100)
+   ```
   	
 This example demonstrates how to set up and run a simulation using the QCloud framework. The code initializes a device (using the IBM_Kawasaki class) and runs a simulation environment (QCloudSimEnv) with a custom job generation model. The simulation runs until a specified time limit.
 
