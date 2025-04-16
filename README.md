@@ -51,7 +51,7 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
     ```
 ## Repository Structure
 
-  ```bash
+   ```bash
       SigSim2025/
       ├── Dockerfile
       ├── README.md
@@ -68,7 +68,7 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
 ## Citation 
 If you use this artifact in your work, please cite:
   
-```
+   ```
      @misc{SigSim2025,
        author       = {A Digital Twin of Scalable Quantum Clouds},
        title        = {{Submission to SigSim2025}},
@@ -76,4 +76,4 @@ If you use this artifact in your work, please cite:
        doi          = {10.5281/zenodo.15099199},
        howpublished = {\url{https://github.com/quantumcloudsim/SigSim2025.git}}
      }
-```
+   ```
