@@ -8,6 +8,12 @@ This repository contains the SigSim2025 artifact: a digital‑twin simulation of
 - Git  
 - Docker (recommended) or Python 3.8+
 
+## Cloning the repository
+To clone the repository, run the following command. 
+```bash
+git clone https://github.com/quantumcloudsim/SigSim2025.git
+```
+
 ## Python Environment (if not using Docker)
 
 1. **Create & activate a virtual environment**  
