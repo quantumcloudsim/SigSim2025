@@ -86,7 +86,8 @@ Make sure you have created a virtual environment and installed all required pack
 2.	**Run the Simulation:**
 Save the following sample code in a Python file (e.g., simulate.py):
 
-         ```python
+         ```
+  	      python
          from QCloud import *
 
          ibm_kawasaki = IBM_Kawasaki(env=None, name="ibm_kawasaki", printlog=True)
