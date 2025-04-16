@@ -80,22 +80,6 @@ git clone https://github.com/quantumcloudsim/SigSim2025.git
 
 ## Example Code
 
-This example demonstrates how to set up and run a simulation using the QCloud framework. The code initializes a device (using the IBM_Kawasaki class) and runs a simulation environment (QCloudSimEnv) with a custom job generation model. The simulation runs until a specified time limit.
-
-Overview
-- Device Initialization:
-An instance of IBM_Kawasaki is created. This represents a device or service in the QCloud simulation environment.
--	Simulation Environment Setup:
-A simulation environment (QCloudSimEnv) is set up with:
--	A list of devices (in this case, a single IBM_Kawasaki instance).
--	A broker class (ParallelBroker) that handles job scheduling.
--	A job feed method (generator) that dynamically creates jobs.
--	A job generation model based on an exponential distribution (using random.expovariate).
--	Simulation Execution:
-The simulation environment is executed for a specified duration (until 100 time units).
-
-## Usage
-
 1.	**Prepare the Environment:**
 Make sure you have created a virtual environment and installed all required packages.
 
@@ -114,6 +98,20 @@ Save the following sample code in a Python file (e.g., simulate.py):
          )
          qcloudsimenv.run(until=100)
          ```
+  	
+This example demonstrates how to set up and run a simulation using the QCloud framework. The code initializes a device (using the IBM_Kawasaki class) and runs a simulation environment (QCloudSimEnv) with a custom job generation model. The simulation runs until a specified time limit.
+
+Overview
+- Device Initialization:
+An instance of IBM_Kawasaki is created. This represents a device or service in the QCloud simulation environment.
+-	Simulation Environment Setup:
+A simulation environment (QCloudSimEnv) is set up with:
+-	A list of devices (in this case, a single IBM_Kawasaki instance).
+-	A broker class (ParallelBroker) that handles job scheduling.
+-	A job feed method (generator) that dynamically creates jobs.
+-	A job generation model based on an exponential distribution (using random.expovariate).
+-	Simulation Execution:
+The simulation environment is executed for a specified duration (until 100 time units).
 
 3.	**Observe the Output:**
 The simulation will execute, logging events to your console (as specified by printlog=True). You can review the simulation steps and results, which might include job scheduling, device processing, and more depending on how the QCloud framework is designed.
