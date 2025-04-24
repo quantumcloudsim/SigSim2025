@@ -1,5 +1,5 @@
 
-# Quantum Cloud Simulation Environment
+# Quantum Cloud Simulation Environment [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15272987.svg)](https://doi.org/10.5281/zenodo.15272987)
 
 
 This repository contains the SigSim2025 artifact: a digital‑twin simulation of a quantum cloud environment, including event‑driven job brokering, dynamic/predefined job feeds, and device maintenance cycles. It supports both serial and parallel scheduling policies across multiple quantum devices.
