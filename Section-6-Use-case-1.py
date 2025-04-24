@@ -144,77 +144,43 @@ print(f"Elapsed time: {sim_elapsed_time:.5f} seconds")
 device_names = ["ibm_kawasaki", "ibm_kyiv", "ibm_sherbrooke", "ibm_quebec", "ibm_rensselaer", 
 "ibm_brisbane", "ibm_brussels", "ibm_strasbourg", "ibm_marrakesh", "ibm_fez", "ibm_torino"]
 
-## PLOTTING FIGURE 6 TOP
-
+## PLOTTING FIGURE 6 
 # Datasets and labels
-datasets = [tot_troughput[1], tot_troughput[2], tot_troughput[3], tot_troughput[4], tot_troughput[5], tot_troughput[6]]
-labels = ['λ = 1', 'λ = 2', 'λ = 3', 'λ = 4', 'λ = 5', 'λ = 6']  # Labels for each dataset
-colors = ["#E41A1C", "#377EB8", "#4DAF4A", "#FF7F00", "#984EA3", "#FFFF33"]   # suggested by chatGPT (color blind friendly)
+# Settings
+datasets1 = [tot_troughput[1], tot_troughput[2], tot_troughput[3], tot_troughput[4], tot_troughput[5], tot_troughput[6]]
+datasets2 = [avg_wait_time[1], avg_wait_time[2], avg_wait_time[3], avg_wait_time[4], avg_wait_time[5], avg_wait_time[6]]
+labels = ['λ = 1', 'λ = 2', 'λ = 3', 'λ = 4', 'λ = 5', 'λ = 6']
+colors = ["#E41A1C", "#377EB8", "#4DAF4A", "#FF7F00", "#984EA3", "#FFFF33"]
 
-# Number of devices (assuming this matches the length of your 'Devices' column)
 num_devices = len(device_names)
-
-# Create an array of positions for the x-axis (one for each device)
 x = np.arange(num_devices)
+width = 0.15
 
-# Define the width of the bars (adjust depending on the number of datasets)
-width = 0.15  # Width of each bar
+# Create vertically stacked subplots
+fig, axs = plt.subplots(nrows=2, ncols=1, figsize=(12, 6), sharex=True)
 
-plt.figure(figsize=(12, 3.5))
+# ----- Plot 1: Total QJobs Throughput -----
+for i, dataset in enumerate(datasets1):
+    axs[0].bar(x + i * width, dataset, width, label=labels[i], color=colors[i])
 
-# Plot each dataset
-for i, dataset in enumerate(datasets):
-    # Plot bars for each dataset
-    plt.bar(x + i * width, dataset, width, label=labels[i], color=colors[i])
+axs[0].set_ylabel('Total QJobs\nThroughput', fontsize=14)
+axs[0].set_ylim(0, 3400)
+axs[0].legend(loc='upper left', bbox_to_anchor=(0, 1), ncol=2)
+axs[0].tick_params(axis='x', labelbottom=False)  # hide x labels for top plot
 
-# Add labels 
-plt.xlabel('QDevices', fontsize=14)
-plt.ylabel('Total QJobs\n Throughput', fontsize=14)
+# ----- Plot 2: Average Wait Time -----
+for i, df in enumerate(datasets2):
+    axs[1].bar(x + i * width, df, width, label=labels[i], capsize=5, color=colors[i])
 
-# Set custom x-tick labels using the device names from averages_df
-plt.xticks(ticks=x + width * 1.5, labels=device_names, rotation=45, ha='right', fontsize=14)
-plt.ylim(0, 3400)
+axs[1].set_xlabel('QDevices', fontsize=14)
+axs[1].set_ylabel('Average\nWait Time', fontsize=14)
+axs[1].set_ylim(0, 280)
+axs[1].set_xticks(x + width * 1.5)
+axs[1].set_xticklabels(device_names, rotation=45, ha='right', fontsize=12)
 
-# Add legend to differentiate between datasets
-plt.legend(loc='upper left', bbox_to_anchor=(0, 1))
-
-# Adjust layout to prevent overlap
 plt.tight_layout()
-plt.savefig("Fig-6-throughput-IBM.png")
-
-## PLOTTING FIGURE 6 BOTTOM
-
-# Create a list of the dataframes for easier iteration
-
-datasets = [avg_wait_time[1], avg_wait_time[2], avg_wait_time[3], avg_wait_time[4], avg_wait_time[5], avg_wait_time[6]]
-labels = ['λ = 1', 'λ = 2', 'λ = 3', 'λ = 4', 'λ = 5', 'λ = 6']  # Labels for the legend
-# colors = ["#f5b7b1", "#d2b4de", "#85c1e9", "#a9dfbf", "#f7dc6f", "#ccd1d1"]   
-colors = ["#E41A1C", "#377EB8", "#4DAF4A", "#FF7F00", "#984EA3", "#FFFF33"] # suggested by chatGPT (color blind friendly)
-
-# Number of devices
-num_devices = len(device_names)
-
-# Create an array of positions for the x-axis (one for each device)
-x = np.arange(num_devices)
-
-# Define width of bars (adjust depending on number of datasets)
-width = 0.15  # Width of each bar
-
-plt.figure(figsize=(12, 1.75))
-
-# Plot each dataset
-for i, df in enumerate(datasets):
-    plt.bar(x + i * width, df, width, label=labels[i], capsize=5, color=colors[i])
-
-# Add labels and title
-plt.xlabel('QDevices', fontsize=14)
-plt.ylabel('Average\n Wait Time', fontsize=14)
-
-# Set custom x-tick labels using the device names from the first dataset (assuming all datasets have the same devices)
-plt.xticks(ticks=x + width * 1.5, labels=device_names, rotation=45, ha='right', fontsize=12)
-plt.ylim(0, 280)
-plt.legend(loc='upper left', bbox_to_anchor=(0.8, 1.3))
-plt.savefig("Fig-6-waittime-IBM.png")
+plt.savefig("Fig-6-throughput-waittime-IBM.png")
+plt.show()
 
 ## PLOTTING FIGURE 7
 
