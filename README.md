@@ -148,4 +148,3 @@ If you use this artifact in your work, please cite:
      year={2025}
    }
    ```
-   ```
